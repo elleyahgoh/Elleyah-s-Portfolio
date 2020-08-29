@@ -1,0 +1,195 @@
+body {
+    font-family: 'Calibri' !important;
+}
+
+.header::before {
+    position: absolute;
+    z-index: -1;
+    background: url("../img/header.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    content: '';
+    height: 606px;
+    width: 100%;
+}
+
+.portrait {
+    margin-top: 25%;
+    max-width: 500px;
+    min-width: 250px;
+    width: 25%;
+}
+
+.about-desc,
+.about-links {
+    width: 80%;
+    max-width: 570px;
+}
+
+.skills-title {
+    background-color: #02014e;
+}
+
+.skills-content {
+    background-color: #3d356d;
+}
+
+.skills-wrapper {
+    max-width: 1224px;
+}
+
+.skill {
+    background-color: #c4c4c4;
+    height: 46px;
+    border-radius: 5px;
+}
+
+.skill::before {
+    position: absolute;
+    content: '';
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #d81159;
+    height: 100%;
+}
+
+.exposures {
+    width: 30%;
+    max-width: 687px;
+}
+
+.project-container {
+    width: 90%;
+    max-width: 1320px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.project-container .slideshow {
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 367px;
+}
+
+.slides,
+.slides .slick-list,
+.slides .slick-list .slick-track,
+.slides .slick-list .slick-track .slide {
+    height: 100%;
+}
+
+.slides-prev, 
+.slides-next {
+    width: 5%;
+}
+
+.slide img {
+    width: 90%; 
+    height: auto; 
+    object-fit: contain;
+}
+
+/* General classes */
+:focus {
+    outline: none;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.f-8 {
+    font-size: .5em;
+}
+
+.f-18 {
+    font-size: 1.125em;
+}
+
+.f-20 {
+    font-size: 1.25em;
+}
+
+.f-24 {
+    font-size: 1.5em;
+}
+
+.f-32 {
+    font-size: 2em;
+}
+
+.f-48 {
+    font-size: 3em;
+}
+
+.f-acacac {
+    color: #acacac;
+}
+
+.f-4a4a4a {
+    color: #4a4a4a;
+}
+
+.f-616161 {
+    color: #616161;
+}
+
+.f-white {
+    color: #fff;
+}
+
+.mt-5rem {
+    margin-top: 5rem;
+}
+
+.bg-f8f8f8 {
+    background-color: #f8f8f8;
+}
+
+.z-index-50 {
+    z-index: 50;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.bottom-0 {
+    bottom: 0;
+}
+
+.right-0 {
+    right: 0;
+}
+
+/* CSS animations */
+.on-scroll.portrait,
+.about-desc .on-scroll,
+.exposures .on-scroll,
+.project-card.on-scroll {
+    opacity: 0;
+    transition: transform 4s .25s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                opacity .3s .25s ease-out;
+    will-change: transform, opacity;
+}
+
+.on-scroll.portrait,
+.exposures .on-scroll,
+.project-card.on-scroll {
+    transform: translateY(2em);
+}
+
+.about-desc .on-scroll {
+    transform: translateX(2em);
+}
+
+.on-scroll.portrait.is-visible,
+.about-desc .on-scroll.is-visible,
+.exposures .on-scroll.is-visible,
+.project-card.on-scroll.is-visible {
+    opacity: 1;
+    transform: translate(0);
+}
+
